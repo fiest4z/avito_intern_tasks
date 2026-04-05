@@ -1,0 +1,35 @@
+[tool.ruff]
+target-version = "py312"
+line-length = 140
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "S",   # flake8-bandit
+    "A",   # flake8-builtins
+    "C4",  # flake8-comprehensions
+    "RET", # flake8-return
+    "SIM", # flake8-simplify
+]
+ignore = [
+    "S101",  # allow assert in tests
+    "S311",  # allow random for test data generation
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["tests"]
+
+[tool.pytest.ini_options]
+markers = [
+    "positive: positive test cases",
+    "negative: negative test cases",
+    "corner: corner cases",
+    "e2e: end-to-end test cases",
+    "nonfunctional: non-functional test cases",
+]

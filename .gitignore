@@ -1,0 +1,10 @@
+node_modules/
+test-results/
+playwright-report/
+.last-run.json
+
+__pycache__/
+.pytest_cache/
+allure-results/
+*.pyc
+venv/
